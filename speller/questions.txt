@@ -1,0 +1,29 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is a lung disease caused by inhaling
+    fine particles of ash or sand dust.
+    
+1.  getrusage gets the resource usage measures from a specified user/program.
+
+2.  There are 16 members in the struct rusage
+
+3.  Before and after could be passed by reference instead of the value, because if you used
+    the value of before and after, they would become copies of the values, which wastes space
+    and time.
+
+4.  After the program opens the text given in the command line arguments, it loops
+    through each character. If the character is a letter or startes with apostrophes, it 
+    is added to the array word[], and the index for the array increases, making sure the 
+    word is stored correctly. If the index becomes greater than the defined LENGTH, the
+    word is ignored, and index gets reset back to 0. If the word has numbers, it is also 
+    ignored and index is reset to 0. Otherwise, the program has found a whole word, and
+    the counter of words goes up. The function check(word) is called to see if the word 
+    is misspelled. If it is misspelled, the counter misspelled increments, and the forloop
+    continues looping.
+
+5.  If we used fscanf instead of fgetc, we would need additional loops to see if the 
+    string used had any number or other non-alphabetical characters. Additionally, fscanf returns
+    the number of input items that matched the format specified. Numbers would be considered
+    part of the string, and apostrophes would not be allowed.
+
+6.  The parameters for check and load are constant because the word at the address for 
+    check will not be changed while checking it. Similarly, the parameter for load is a
+    constant because the dicitonary is not being changed/written to.
